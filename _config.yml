@@ -1,0 +1,11 @@
+#Site settings
+#These are used to personalize the new site.
+title: Home
+
+
+
+#Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
