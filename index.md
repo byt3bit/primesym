@@ -18,6 +18,6 @@ MiMC is a family of block ciphers and hash functions primarily designed for SNAR
 
 ## GMiMC
 
-Generalized MiMC is an extension of the MiMC family. The two branch Feistel network is extended using well studied generalized Fesitel structures. This block cipher family is used with a fixed key to build GMiMCHash in a Sponge mode. The main advantage of GMiMC is that it allows to use samller field sizes (compared to MiMC) to construct a hash function which has same security level as MiMCHash. 
+Generalized MiMC is an extension of the MiMC family. The two branch Feistel network used in MiMC is extended using well studied generalized Fesitel structures. This block cipher family is used with a fixed key to build GMiMCHash in a Sponge mode. The main advantage of GMiMC is that it allows to use samller field sizes (compared to MiMC) to construct a hash function which has same security level as MiMCHash. 
 
 
