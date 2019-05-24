@@ -13,7 +13,7 @@ Starkad and Poseidon are both based on the hadesMiMC design strategy. Starkad is
 
 ## MiMC
 
-MiMC is a family of block ciphers and hash functions primarily designed for SNARK applications. The MiMC block cipher family comes in two different modes - Even-Mansour and Feistel (two branch). The MiMC keyed permutations are further used in a Sponge mode to construct MiMCHash family of hash functions.
+MiMC is a family of block ciphers and hash functions primarily designed for SNARK applications. The MiMC block cipher family comes in two different modes - Even-Mansour and Feistel (two branch). The MiMC keyed permutations are further used in a Sponge mode to construct the MiMCHash family of hash functions.
 
 
 ## GMiMC
