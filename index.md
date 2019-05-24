@@ -8,7 +8,7 @@ On this website we provide the specifications, codes, documentation and updates 
 
 ## Strakad and Poseidon (New)
 
-Starkad and Poseidon are both based on the hadesMiMC design strategy. Starkad is a hash function family designed over prime field and well-fitted for STARK applications. Poseidon is also a hash function family designed for SNARK applications.    
+Starkad and Poseidon are both based on the hadesMiMC design strategy. Poseidon is a hash function family designed over prime field and well-fitted for SNARK applications. Starkad is also a hash function family designed for STARK applications.    
 
 
 ## MiMC
