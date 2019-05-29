@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" media="screen" title="Standard Stylesheet" href="css/standard.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+<link rel="shortcut icon" href="favicon.png">
+
+<title>STARK-Friendly Functions</title>
+</head>
+<body>
+
+<!-- Wrap around all content, except footer -->
+<div id="pagewrap">
+
+<!-- JAVASCRIPT FUNCTIONS -->
+<script language="javascript">
+
+</script>
+
+<!-- PRELOAD IMAGES -->
+
+<!-- HEADERSECTION -->
+<section id="headersection">
+<div id="header">
+Header
+</div>
+</section> <!-- HEADERSECTION end -->
+
+<!-- CONTENTSECTION (NAVIGATION MENU AND CONTENT) -->
+<section id="contentsection">
+<!-- NAVIGATION ELEMENT -->
+<div id="nav">
+<div id="navcontent">
+<ul>
+    <li><a class="nav-left" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+    <li><a class="nav-right" href="starkadposeidon.html">Starkad and Poseidon</a></li>
+    <li><a class="nav-right" href="gmimc.html">GMiMC</a></li>
+    <li><a class="nav-right" href="mimc.html">MiMC</a></li>
+</ul>
+</div>
+</div>
+
+<div id="pagecontent">
+<div id="pagecontent-inner">
+<h2 class="inpage-heading">Description</h2>
+<p class="inpage-paragraph">
+Similar to the original version of MiMC, GMiMC also uses the function \(f(x) = x^3\) as the main component of its construction. However, where MiMC uses a simple encryption path or, alternatively, a balanced Feistel network, GMiMC uses a different approach, namely unbalanced Feistel networks.
+
+We focus here on GMiMC\(_\text{erf}\), which is based on a Feistel network with an expanding round function. It can be described as
+\begin{equation*}
+(X_0, X_1, \dots, X_{t-1}) \leftarrow (X_1 + F(X_0), X_2 + F(X_0), \dots, X_{t-1} + F(X_0), X_0),
+\end{equation*}
+where \(F(\cdot)\) is the round function in round \(j\) defined as
+\begin{equation*}
+F(X_i) = (X_i + k_j + c_j)^3
+\end{equation*}
+and \(k_j\) and \(c_j\) denote the round constant and the round key in round \(j\), respectively. Note that distinct round keys are used in GMiMC\(_\text{erf}\) and they are derived from the \(\kappa\)-bit master key \(k\). In detail, if the key size is the same as the field size, the same key is used for each round. If the key size is larger than the field size (which is the case for most instantiations), then \(k_j\) = \(k'_{j \pmod{l}}\), where \(k = (k'_0 \mid\mid k'_1 \mid\mid \dots \mid\mid k'_{l-1})\) and \(\kappa = l \cdot n\).
+</p>
+</div>
+</div>
+
+</section> <!-- CONTENTSECTION end -->
+
+<!-- pageWrap end -->
+</div>
+
+<!-- FOOTERSECTION -->
+<section id="footersection">
+<!-- FOOTER ELEMENT -->
+<footer>
+Footer
+</footer>
+</section> <!-- FOOTERSECTION end -->
+
+</body>
+</html>
