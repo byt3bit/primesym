@@ -4,6 +4,8 @@ layout: home
 
 {% include lib/mathjax.html %}
 
+# Introduction
+
 On this website we provide the specifications, codes, documentation and updates about a novel class of block ciphers and hash functions, designed for MPC, Zero-knowledge, SNARK and STARK applications. 
 
 
