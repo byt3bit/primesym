@@ -1,12 +1,13 @@
 ---
 layout: page
-title: GMiMC
+title: Feistel-MiMC and GMiMC 
 permalink: /gmimc/
 ---
 
 {% include lib/mathjax.html %}
+Feistel-MiMC is constructed using the APN function \\(f(x) = x^3\\) over $$ \mathbb{F}_p $$ and \\( \mathbb{F}_{2^n} \\). Compared to MiMC, the Feistel-MiMC is constructed over a smaller field while allowing same input size. For example, given a $$m$$-bit input, MiMC can operate over a field $$\mathbb{F}_p$$ such that $$\log_2 p = m$$. However, Feistel-MiMC is constructed with $$\log_2 p = m/2$$.       
 
-Similar to the original version of MiMC, GMiMC also uses the function \\(f(x) = x^3\\) as the main component of its construction. However, where MiMC uses a simple encryption path or, alternatively, a balanced Feistel network, GMiMC uses a different approach, namely unbalanced Feistel networks.
+Similar to the original version of MiMC, GMiMC also uses the function \\(f(x) = x^3\\) as the main nonlinear component of its construction. However, where MiMC uses a simple encryption path or, alternatively, a balanced Feistel network, GMiMC uses a different approach, namely unbalanced Feistel networks.
 
 We focus here on GMiMC$$_\textsf{erf}$$, which is based on a Feistel network with an _expanding round function_ (ERF). It can be described as
 
