@@ -15,13 +15,13 @@ For an \\(n\\)-bit key, the key scheduling adds the same \\(n\\)-bit key at each
 In detail, the encryption function of MiMC-\\(n/n\\) is
 
 $$
-E_k(x) = (F_{r-1} \circ F_{r-2} \circ \dots \circ F_0)(x) \oplus k,
+E_k(x) = (F_{r-1} \circ F_{r-2} \circ \dots \circ F_0)(x) + k,
 $$
 
 where $$x$$ is the plaintext, $$r$$ is the number of rounds, \\(F_i\\) is the round function in round \\(i\\), and \\(k\\) is the key. Each \\(F_i\\) is defined as
 
 $$
-F_i(x) = (x \oplus k \oplus c_i)^3,
+F_i(x) = (x + k + c_i)^3,
 $$
 
 where \\(c_i\\) is the round constant in round \\(i\\) and \\(c_0 = 0\\). The round constants are chosen as random elements of \\(\mathbb{F}_q\\) at the instantiation of MiMC and then fixed. Note that there are no round keys, instead the same key is used in each round and once at the end. 
