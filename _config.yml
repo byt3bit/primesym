@@ -9,9 +9,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-#---
-#redirect_from: "byt3bit.github.io/primesym"
-#---
 
 header_pages:
   - mimc.md
