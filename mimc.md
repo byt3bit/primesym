@@ -6,7 +6,7 @@ permalink: /mimc/
 
 {% include lib/mathjax.html %}
 
-MiMC is block cipher and hash function family designed specifically for SNARK applications. The low multiplicative complexity of MiMC over prime fields makes it suitable for ZK-SNARK applications such as ZCash.
+MiMC is a block cipher and hash function family designed specifically for SNARK applications. The low multiplicative complexity of MiMC over prime fields makes it suitable for ZK-SNARK applications such as ZCash.
 
 The core component of MiMC is the APN function $$ f(x) = x^3 $$. The function is computed in \\(\mathbb{F}_q\\), where \\(q = p\\) or \\(q = 2^n\\) for a prime number \\(p\\) and a natural number \\(n\\). 
 
@@ -22,7 +22,10 @@ $$
 F_i(x) = (x + k + c_i)^3,
 $$
 
-where \\(c_i \in \mathbb{F}_q\\) are the round constants and \\(c_0 = 0\\). The round constants are chosen as random elements of \\(\mathbb{F}_q\\) at the instantiation of MiMC and then fixed. Note that there are no round keys, instead the same key is used in each round and once at the end. All the operations are defined in the underlying field $$\mathbb{F}_q$$
+where \\(c_i \in \mathbb{F}_q\\) are the round constants and \\(c_0 = 0\\). The round constants are chosen as random elements of \\(\mathbb{F}_q\\) at the instantiation of MiMC and then fixed. Note that there are no round keys, instead the same key is used in each round and once at the end. All the operations are defined in the underlying field $$\mathbb{F}_q$$.
+
+
+<img src="mimc.png" width="700">
 
 For a $$2n$$-bit key, $$(K_0, K_1) \in \mathbb{F}_q^2$$ is chosen uniformly randomly. In this case the two keys $$K_0$$ and $$K_1$$ are added alternately through the rounds. Hence, the key scheduling for round $$i$$ is defined as $$k_i = K_{i \pmod 2}$$ and, the round function is defined as 
 
