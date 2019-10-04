@@ -7,7 +7,7 @@ layout: home
 # Introduction
 
 
-A new type of block ciphers and hash functions have emerged over the past few years. The broad target of these designs is to achieve a low _multiplicative complexity_.   
+A new type of block ciphers and hash functions were proposed over the past few years. The broad target of these designs is to achieve a low _multiplicative complexity_.   
 
 This website provides brief specifications, (links to) codes and other references and updates about a novel class of block ciphers and hash functions, designed for MPC, Zero-knowledge, SNARK and STARK applications. 
 
