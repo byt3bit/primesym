@@ -6,7 +6,7 @@ permalink: /mimc/
 
 {% include lib/mathjax.html %}
 
-MiMC is a block cipher and hash function family designed specifically for SNARK applications. The low multiplicative complexity of MiMC over prime fields makes it suitable for ZK-SNARK applications such as ZCash.
+__MiMC__ is a block cipher and hash function family designed specifically for SNARK applications. The low multiplicative complexity of MiMC over prime fields makes it suitable for ZK-SNARK applications such as ZCash.
 
 The core component of MiMC is the APN function $$ f(x) = x^3 $$. The function is computed in \\(\mathbb{F}_q\\), where \\(q = p\\) or \\(q = 2^n\\) for a prime number \\(p\\) and a natural number \\(n\\). 
 
@@ -34,3 +34,11 @@ F_i(x) = (x + k_i + c_i)^3,
 $$
 
 for $$i \geq 0$$.
+
+__Feistel-MiMC__ is constructed over $$ \mathbb{F}_q $$ using the same round function \\(f(x) = x^3\\). Note that in Feistel-MiMC the input (and output) is in $$\mathbb{F}_q^2$$. Each round of is defined as
+
+$$
+(x_{i+1}, y_{i+1}) = (y_i, x_i + (y_i + k_i + c_i)^3)
+$$
+
+where $$(x_{i+1}, y_{i+1})$$ is the state after round $$i$$, $$(x_0, y_0)$$ is the input and $$k_i = (i+1)\cdot k$$ for \\(i \geq 0 \\). 
