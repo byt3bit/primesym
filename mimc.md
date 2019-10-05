@@ -27,7 +27,7 @@ where \\(c_i \in \mathbb{F}_q\\) are the round constants and \\(c_0 = 0\\). The 
 
 <img src="mimc.png" width="700">
 
-For a $$2n$$-bit key, $$(K_0, K_1) \in \mathbb{F}_q^2$$ is chosen uniformly randomly. In this case the two keys $$K_0$$ and $$K_1$$ are added alternately through the rounds. Hence, the key scheduling for round $$i$$ is defined as $$k_i = K_{i \pmod 2}$$ and, the round function is defined as 
+For a $$2n$$-bit key, $$(K_0, K_1) \in \mathbb{F}_q^2$$ is chosen uniformly randomly. In this case the two keys $$K_0$$ and $$K_1$$ are added alternately through the rounds. Hence, the key scheduling for round $$i$$ is defined as $$k_i = K_{i \pmod 2}$$, and the round function is defined as 
 
 $$
 F_i(x) = (x + k_i + c_i)^3,
